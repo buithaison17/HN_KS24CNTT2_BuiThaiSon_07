@@ -200,6 +200,7 @@ int main(){
                 root = updateWord(root, wordSearch);
                 break;
             case 5:
+                printf("Da thoat\n");
                 break;
             default:
                 printf("Nhap sai chuc nang\n");

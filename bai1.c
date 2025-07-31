@@ -153,10 +153,7 @@ void undoRequest(Queue** requestProcess, Stack** undo){
 }
 
 void clearHistory(LinkedList** history){
-    if((*history)->head == NULL){
-        printf("Lich su trong\n");
-        return;
-    }
+    if((*history)->head == NULL) return;
     Node* current = (*history)->head;
     while(current){
         Node* temp = current->next;
@@ -164,7 +161,6 @@ void clearHistory(LinkedList** history){
         current = temp;
     }
     (*history)->head = NULL;
-    printf("Xoa lich su thanh cong\n");
 }
 
 void freeQueue(Queue** q){
@@ -236,11 +232,13 @@ int main(){
                 break;
             case 6:
                 clearHistory(&history);
+                printf("Xoa lich su thanh cong\n");
                 break;
             case 7:
                 freeQueue(&requestProcess);
                 freeStack(&undo);
                 clearHistory(&history);
+                printf("Da thoat\n");
                 break;
             default:
                 printf("Nhap sai chuc nang\n");
