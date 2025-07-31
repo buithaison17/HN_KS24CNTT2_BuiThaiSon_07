@@ -91,7 +91,7 @@ void pop(Stack** s){
     
 void procressRequest(Queue** requestProcess, Stack** undo, LinkedList** history){
     if((*requestProcess)->front == NULL){
-        printf("Khong co yeu cau nao can xu li");
+        printf("Khong co yeu cau nao can xu li\n");
         return;
     }
     Request temp = (*requestProcess)->front->request;

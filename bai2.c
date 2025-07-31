@@ -134,7 +134,10 @@ Node* updateWord(Node* root, char wordSearch[]){
         strcpy(wordCopy, current->word.english);
         toLowerCase(wordCopy);
         if(strcmp(wordSearch, wordCopy) == 0){
-            printf("Nhap nghia moi: ");
+            printf("Nhap tu: ");
+            fgets(current->word.english, sizeof(current->word.english), stdin);
+            current->word.english[strcspn(current->word.english, "\n")] = '\0';
+            printf("Nhap nghia: ");
             fgets(current->word.vietnamese, sizeof(current->word.vietnamese), stdin);
             current->word.vietnamese[strcspn(current->word.vietnamese, "\n")] = '\0';
             printf("Cap nhat nghia thanh cong\n");
